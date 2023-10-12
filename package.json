@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "node index.test.js"
+    "test": "jest --coverage"
   },
   "repository": {
     "type": "git",
@@ -15,5 +15,10 @@
   "bugs": {
     "url": "https://github.com/curso-fc/desafio-sonar/issues"
   },
-  "homepage": "https://github.com/curso-fc/desafio-sonar#readme"
+  "homepage": "https://github.com/curso-fc/desafio-sonar#readme",
+  "dependencies": {
+    "@types/jest": "^29.5.5",
+    "jest": "^29.7.0",
+    "sonar-scanner": "^3.1.0"
+  }
 }

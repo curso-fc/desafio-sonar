@@ -1,37 +1,23 @@
-const createBox = (x, y) => {
-    return x * y;  
+const somar = (a,b) => {
+    return a + b;
 };
 
-const canDrive = () => {
-    const age = 18;
-
-    if (age >= 18) {
-        return 'Full Driving Licence';
-    } else {
-        return 'Provisional License';
-    }
+const subtrair = (a,b) => {
+    return a - b;
 };
 
-const powerLevel = () => {
-    const power = 9001;
-
-    if (power > 9000) {
-        return true;
-    } else {
-        return false;
-    }
+const multiplicar = (a,b) => {
+    return a * b;
 };
 
-const workSchedule = (employeeOne, employeeTwo) => {
-    return employeeOne + employeeTwo;
+const dividir = (a,b) => {
+    return a / b;
+};
+
+const obterRestoDivisao = (a,b) => {
+    return a % b;
 };
 
 module.exports = {
-    createBox,
-
-    canDrive,
-
-    powerLevel,
-
-    workSchedule,
-};
+    somar, subtrair, multiplicar, dividir, obterRestoDivisao
+}

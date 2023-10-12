@@ -1,45 +1,21 @@
-const test = require('node:test');
+const calculadora = require('./index');
 
-const assert = require('assert/strict');
-
-const {
-  createBox,
-  canDrive,
-  powerLevel,
-  workSchedule,
-} = require('./index');
-
-
-// Creates a box with an equal height and width
-
-test('creates a box', async (t) => {
-  await t.test('creates a small box', () => {
-    assert.equal(createBox(10, 10), 100);
-  });
-
-  await t.test('creates a large box', () => {
-    assert.equal(createBox(50, 50), 2500);
-  });
+test("Somar 1 com 2 tem que ser 3", ()=> {
+  expect(calculadora.somar(1,2)).toBe(3);
 });
 
-// Checks to see whether or not the person has a full driving licence
-
-test('checks license', () => {
-  return assert.match(`${canDrive()}`, /Full Driving Licence/);
+test("Subtrair 2 com 1 tem que ser 1", ()=> {
+  expect(calculadora.subtrair(2,1)).toBe(1);
 });
 
-// Confirms that the person has a power level that is over 9000!
-
-test('confirms power level', () => {
-  return assert.ok(powerLevel());
+test("Multiplicar 2 com 2 tem que ser 4", ()=> {
+  expect(calculadora.multiplicar(2,2)).toBe(4);
 });
 
-// Checks to see if the employees have the same amount of shift work days in a week
+test("Dividir 4 com 2 tem que ser 2", ()=> {
+  expect(calculadora.dividir(4,2)).toBe(2);
+});
 
-test('employees have an equal number of work days', () => {
-  const employeeOne = ['Monday', 'Tuesday', 'Wednesday,', 'Thursday'];
-
-  const employeeTwo = ['Friday', 'Saturday', 'Sunday,', 'Monday'];
-
-  return assert.equal(workSchedule(employeeOne.length, employeeTwo.length), 8);
+test("O resto da divisão entre 10 e 5 tem que ser 0", ()=> {
+  expect(calculadora.obterRestoDivisao(10,5)).toBe(0);
 });
