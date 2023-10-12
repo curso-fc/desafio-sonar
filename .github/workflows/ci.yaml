@@ -7,10 +7,8 @@ on:
     branches: [ "develop", "master" ]
 
 jobs:
-  build:
-
+  check-application:
     runs-on: ubuntu-latest
-
     steps:
     - uses: actions/checkout@v3
     - name: Use desafio-fc-ci-pipeline-sonar 18.12.1
