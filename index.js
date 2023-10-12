@@ -1,5 +1,5 @@
 const createBox = (x, y) => {
-    return x * y; 
+    return x * y;  
 };
 
 const canDrive = () => {
