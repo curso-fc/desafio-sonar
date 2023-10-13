@@ -17,5 +17,5 @@ test("Dividir 4 com 2 tem que ser 2", ()=> {
 });
 
 test("O resto da divisão entre 10 e 5 tem que ser 0", ()=> {
-  expect(calculadora.obterRestoDivisao(10,5)).toBe(1);
+  expect(calculadora.obterRestoDivisao(10,5)).toBe(0);
 });
